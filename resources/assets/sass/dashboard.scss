@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+@import 'global/_variables';
+@import 'global/components/_mixins';
+
+$theme-style: 'square';
+$theme-type:  'default';
+
+// General CSS Reset
+@import 'global/components/_reset-rounds';
+@import 'global/components/_reset-general';
+@import 'global/components/_utils';
