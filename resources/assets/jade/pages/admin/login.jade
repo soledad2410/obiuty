@@ -1,0 +1,39 @@
+doctype html
+//if IE 8
+  html.ie8.no-js(lang='en')
+//if IE 9
+  html.ie9.no-js(lang='en')
+// [if !IE] <!
+html(lang='en')
+    // <![endif]
+    // BEGIN HEAD
+    head
+        meta(charset='utf-8')
+        title Đăng nhập
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(content='width=device-width, initial-scale=1.0', name='viewport')
+        meta(http-equiv='Content-type', content='text/html; charset=utf-8')
+        meta(content='', name='description')
+        meta(content='', name='author')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all', rel='stylesheet', type='text/css')
+        link(href='/public/templates/assets/css/login.css', rel='stylesheet', type='text/css')
+    body.login
+        .content
+            form.login-form(action='index.html', method='post')
+                h3.form-title Đăng nhập
+                .alert.alert-danger.display-hide
+                    button.close(data-close='alert')
+                    span
+                        | Tên đăng nhập hoặc mật khẩu không đúng.
+                .form-group
+                    // ie8, ie9 does not support html5 placeholder, so we just show field title for that
+                    label.control-label.visible-ie8.visible-ie9 Tên đăng nhập
+                    input.form-control.form-control-solid.placeholder-no-fix(type='text', autocomplete='off', placeholder='Tên đăng nhập', name='username')
+                .form-group
+                    label.control-label.visible-ie8.visible-ie9 Mật khẩu
+                    input.form-control.form-control-solid.placeholder-no-fix(type='password', autocomplete='off', placeholder='Mật khẩu', name='password')
+                .create-account
+                    p
+                        button#register-btn.uppercase(type='submit') Đăng nhập
+        .copyright
+            | 2016 © ORM
