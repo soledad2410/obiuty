@@ -5,9 +5,13 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "amcharts": "^3.14.5",
+    "block-ui": "^2.70.1",
     "bootstrap-sass": "^3.3.0",
+    "flot": "^0.8.0-alpha",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
+    "jquery": "^2.0.0",
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-jade": "^0.2.4",
     "simple-line-icons": "^2.3.2"
