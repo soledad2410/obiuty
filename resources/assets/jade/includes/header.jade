@@ -1,0 +1,30 @@
+.page-header.-i.navbar.navbar-fixed-top
+  .page-header-inner
+    .page-logo
+      a(href='dashboard.html')
+        img.logo-default(src='/public/templates/assets/images/logo.png', alt='logo')
+      .menu-toggler.sidebar-toggler.hide
+    // /.page-logo
+    a.menu-toggler.responsive-toggler(href='javascript:;', data-toggle='collapse', data-target='.navbar-collapse')
+    .top-menu
+      ul.nav.navbar-nav.pull-right
+        li.dropdown.dropdown-user
+          a.dropdown-toggle(href='javascript:;', data-toggle='dropdown', data-hover='dropdown', data-close-others='true')
+            img.img-circle(alt='', src='/public/templates/assets/images/avatar3_small.jpg')
+            span.username.username-hide-on-mobile
+              | Admin
+            i.fa.fa-angle-down
+          ul.dropdown-menu.dropdown-menu-default
+            li
+              a(href='profile.html')
+                i.icon-user
+                | Profile
+            li
+              a(href='login.html')
+                i.icon-key
+                |  Log Out
+    // /.top-menu
+  // /.page-header-inner
+// /.page-header
+.clearfix
+.page-container
