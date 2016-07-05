@@ -1,4 +1,6 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
 
 @import 'global/_variables';
 @import 'global/components/_mixins';
@@ -6,7 +8,15 @@
 $theme-style: 'square';
 $theme-type:  'default';
 
-// General CSS Reset
-@import 'global/components/_reset-rounds';
-@import 'global/components/_reset-general';
-@import 'global/components/_utils';
+@import 'global/components.scss';
+@import 'admin/layout/layout.scss';
+@import 'admin/layout/themes/darkblue.scss';
+@import 'admin/pages/tasks.scss';
+
+.amcharts-main-div a {
+  display: none!important;
+  visibility: hidden;
+  position: absolute!important;
+  left: -999999999999px!important;
+  text-indent: -9999999999px!important;
+}
