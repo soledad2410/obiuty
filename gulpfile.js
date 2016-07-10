@@ -43,9 +43,8 @@ elixir(function(mix) {
     mix.jade({
         blade: false,
         html: true,
-        dest: '/html/',
+        dest: '/../public/templates',
         search: '**/*.jade',
         src: '/assets/jade/',
-    })
-        .copy('resources/html', 'public/templates').remove('resources/html');
+    });
 });

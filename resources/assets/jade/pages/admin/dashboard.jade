@@ -7,538 +7,541 @@ append css
   link(href='/public/templates/assets/css/dashboard.css', rel='stylesheet', type='text/css')
 
 append body
-  +body(class="page-header-fixed page-quick-sidebar-over-content")
+  +body(class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo")
 
 append body-content
   include ../../includes/header.jade
+  .page-container
+    include ../../includes/sidebar.jade
 
-  include ../../includes/sidebar.jade
-
-  .page-content-wrapper
-    .page-content
-      h3.page-title
-        | Tổng quan
-      .row
-        .col-lg-4.col-md-4.col-sm-6.col-xs-12.margin-bottom-10
-          .dashboard-stat.blue-madison
-            .visual
-              i.fa.fa-briefcase.fa-icon-medium
-            .details
-              .number
-                | 592.540
-              .desc
-                | Liên hệ đặt hàng
-            a.more(href='javascript:;')
-              | Xem chi tiết
-              i.m-icon-swapright.m-icon-white
-        .col-lg-4.col-md-4.col-sm-6.col-xs-12
-          .dashboard-stat.red-intense
-            .visual
-              i.fa.fa-shopping-cart
-            .details
-              .number
-                | 527,390
-              .desc
-                | Đơn hàng
-            a.more(href='javascript:;')
-              | Xem chi tiết
-              i.m-icon-swapright.m-icon-white
-        .col-lg-4.col-md-4.col-sm-6.col-xs-12
-          .dashboard-stat.green-haze
-            .visual
-              i.fa.fa-group.fa-icon-medium
-            .details
-              .number
-                | 527,234
-              .desc
-                | Đơn hàng bán được
-            a.more(href='javascript:;')
-              | Xem chi tiết
-              i.m-icon-swapright.m-icon-white
-      .portlet.light.bordered
-        .portlet-title
-          .caption
-            i.fa.fa-bar-chart-o.font-green-haze
-            span.caption-subject.bold.uppercase.font-green-haze Thống kê trong ngày
-        .portlet-body
-          .tabbable-line
-            ul.nav.nav-tabs
-              li.active
-                a(href='#overview_1', data-toggle='tab')
-                  | L.hệ đặt hàng
-              li
-                a(href='#overview_2', data-toggle='tab')
+    .page-content-wrapper
+      .page-content
+        .page-head
+          .page-title
+            h1
+              | Tổng quan
+          // /.page-title
+        .row
+          .col-lg-4.col-md-4.col-sm-6.col-xs-12.margin-bottom-10
+            .dashboard-stat.blue-madison
+              .visual
+                i.fa.fa-briefcase.fa-icon-medium
+              .details
+                .number
+                  | 592.540
+                .desc
+                  | Liên hệ đặt hàng
+              a.more(href='javascript:;')
+                | Xem chi tiết
+                i.m-icon-swapright.m-icon-white
+          .col-lg-4.col-md-4.col-sm-6.col-xs-12
+            .dashboard-stat.red-intense
+              .visual
+                i.fa.fa-shopping-cart
+              .details
+                .number
+                  | 527,390
+                .desc
                   | Đơn hàng
-              li
-                a(href='#overview_3', data-toggle='tab')
-                  | Đ.hàng bán được
-              li.dropdown
-                a(href='#overview_4', data-toggle='tab')
-                  | Tồn đọng
-            .tab-content
-              #overview_1.tab-pane.active
-                .table-responsive
-                  table.table.table-striped.table-hover.table-bordered
-                    thead
-                      tr
-                        th
-                          | Khách hàng
-                        th
-                          | S/L mua
-                        th
-                          | Tổng tiền
-                        th
-                          | Trạng thái
-                        th
-                    tbody
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Amanda Nilson
-                        td
-                          | 4
-                        td
-                          | $12625.50
-                        td
-                          span.label.label-sm.label-success
-                            | Đã thanh toán
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | David Wilson
-                        td
-                          | 3
-                        td
-                          | $625.50
-                        td
-                          span.label.label-sm.label-warning
-                            | Đang xác nhận
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jhon Doe
-                        td
-                          | 2
-                        td
-                          | $125.00
-                        td
-                          span.label.label-sm.label-danger
-                            | Đã hủy
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Patrick Walker
-                        td
-                          | 2
-                        td
-                          | $1239.85
-                        td
-                          span.label.label-sm.label-success
-                            | Đã thanh toán
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Paul Strong
-                        td
-                          | 1
-                        td
-                          | $890.85
-                        td
-                          span.label.label-sm.label-info
-                            | Đang chuyển
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Bill Chang
-                        td
-                          | 45
-                        td
-                          | $12,125.70
-                        td
-                          span.label.label-sm.label-primary
-                            | Đã chuyển
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jane Hilson
-                        td
-                          | 5
-                        td
-                          | $239.85
-                        td
-                          span.label.label-sm.label-warning
-                            | Đang xác nhận
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-              #overview_2.tab-pane
-                .table-responsive
-                  table.table.table-striped.table-hover.table-bordered
-                    thead
-                      tr
-                        th
-                          | Khách hàng
-                        th
-                          | S/L mua
-                        th
-                          | Tổng tiền
-                        th
-                          | Trạng thái
-                        th
-                    tbody
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jane Hilson
-                        td
-                          | 5
-                        td
-                          | $239.85
-                        td
-                          span.label.label-sm.label-warning
-                            | Đang xác nhận
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | David Wilson
-                        td
-                          | 3
-                        td
-                          | $625.50
-                        td
-                          span.label.label-sm.label-warning
-                            | Đang xác nhận
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Amanda Nilson
-                        td
-                          | 4
-                        td
-                          | $12625.50
-                        td
-                          span.label.label-sm.label-success
-                            | Đã thanh toán
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Paul Strong
-                        td
-                          | 1
-                        td
-                          | $890.85
-                        td
-                          span.label.label-sm.label-info
-                            | Đang chuyển
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jhon Doe
-                        td
-                          | 2
-                        td
-                          | $125.00
-                        td
-                          span.label.label-sm.label-danger
-                            | Đã hủy
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Patrick Walker
-                        td
-                          | 2
-                        td
-                          | $1239.85
-                        td
-                          span.label.label-sm.label-success
-                            | Đã thanh toán
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Bill Chang
-                        td
-                          | 45
-                        td
-                          | $12,125.70
-                        td
-                          span.label.label-sm.label-primary
-                            | Đã chuyển
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-              #overview_3.tab-pane
-                .table-responsive
-                  table.table.table-striped.table-hover.table-bordered
-                    thead
-                      tr
-                        th
-                          | Khách hàng
-                        th
-                          | Số lượng mua
-                        th
-                          | Tổng tiền
-                        th
-                    tbody
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | David Wilson
-                        td
-                          | 3
-                        td
-                          | $625.50
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Amanda Nilson
-                        td
-                          | 4
-                        td
-                          | $12625.50
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jhon Doe
-                        td
-                          | 2
-                        td
-                          | $125.00
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Bill Chang
-                        td
-                          | 45
-                        td
-                          | $12,125.70
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Paul Strong
-                        td
-                          | 1
-                        td
-                          | $890.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jane Hilson
-                        td
-                          | 5
-                        td
-                          | $239.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Patrick Walker
-                        td
-                          | 2
-                        td
-                          | $1239.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-              #overview_4.tab-pane
-                .table-responsive
-                  table.table.table-striped.table-hover.table-bordered
-                    thead
-                      tr
-                        th
-                          | Khách hàng
-                        th
-                          | Số lượng mua
-                        th
-                          | Tổng tiền
-                        th
-                    tbody
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Patrick Walker
-                        td
-                          | 2
-                        td
-                          | $1239.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Amanda Nilson
-                        td
-                          | 4
-                        td
-                          | $12625.50
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | David Wilson
-                        td
-                          | 3
-                        td
-                          | $625.50
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Bill Chang
-                        td
-                          | 45
-                        td
-                          | $12,125.70
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jane Hilson
-                        td
-                          | 5
-                        td
-                          | $239.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Jhon Doe
-                        td
-                          | 2
-                        td
-                          | $125.00
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-                      tr
-                        td
-                          a(href='javascript:;')
-                            | Paul Strong
-                        td
-                          | 1
-                        td
-                          | $890.85
-                        td
-                          a.btn.default.btn-xs.green-stripe(href='javascript:;')
-                            | View
-      .row
-        .col-lg-6
-          .portlet.light.bordered
-            .portlet-title
-              .caption
-                i.fa.fa-home.font-green-haze
-                span.caption-subject.bold.uppercase.font-green-haze Kho
-            .portlet-body
-              #stock_chart.chart(style='height: 260px;')
-        .col-lg-6
-          .portlet.light.bordered
-            .portlet-title
-              .caption
-                i.fa.fa-truck.font-green-haze
-                span.caption-subject.bold.uppercase.font-green-haze Vận chuyển
-            .portlet-body
-              #ship_chart.chart(style='height: 260px;')
-      .row
-        .col-lg-6
-          .portlet.light.bordered.tasks-widget
-            .portlet-title
-              .caption
-                i.fa.fa-cube.font-green-haze
-                span.caption-subject.bold.uppercase.font-green-haze Sản phẩm
-            .portlet-body
-              ul.task-list
+              a.more(href='javascript:;')
+                | Xem chi tiết
+                i.m-icon-swapright.m-icon-white
+          .col-lg-4.col-md-4.col-sm-6.col-xs-12
+            .dashboard-stat.green-haze
+              .visual
+                i.fa.fa-group.fa-icon-medium
+              .details
+                .number
+                  | 527,234
+                .desc
+                  | Đơn hàng bán được
+              a.more(href='javascript:;')
+                | Xem chi tiết
+                i.m-icon-swapright.m-icon-white
+        .portlet.light.bordered
+          .portlet-title
+            .caption
+              i.fa.fa-bar-chart-o.font-green-haze
+              span.caption-subject.bold.uppercase.font-green-haze Thống kê trong ngày
+          .portlet-body
+            .tabbable-line
+              ul.nav.nav-tabs
+                li.active
+                  a(href='#overview_1', data-toggle='tab')
+                    | L.hệ đặt hàng
                 li
-                  span.task-title Tổng sản phẩm: 120,300
+                  a(href='#overview_2', data-toggle='tab')
+                    | Đơn hàng
                 li
-                  span.task-title
-                    | Bán chạy nhất tháng:&nbsp;
-                    a(href='javascript:;') Sản phẩm 1
-                li
-                  span.task-title
-                    | Bán chạy nhì tháng:&nbsp;
-                    a(href='javascript:;') Sản phẩm 2
-                li
-                  span.task-title
-                    | Tiềm năng nhất tháng:&nbsp;
-                    a(href='javascript:;') Sản phẩm 3
-        .col-lg-6
-          .portlet.light.bordered.tasks-widget
-            .portlet-title
-              .caption
-                i.fa.fa-home.font-green-haze
-                span.caption-subject.bold.uppercase.font-green-haze Địa lý
-            .portlet-body
-              ul.task-list
-                li
-                  span.task-title Tỉnh thành mua nhiều nhất tháng: Hà Nội
-                li
-                  span.task-title Tỉnh thành mua nhiều nhì tháng: Hà Nam
-                li
-                  span.task-title Tỉnh thành bán hàng tiềm năng nhất tháng: Ninh Bình
-    // /.page-content
-  // /.page-content-wrapper
+                  a(href='#overview_3', data-toggle='tab')
+                    | Đ.hàng bán được
+                li.dropdown
+                  a(href='#overview_4', data-toggle='tab')
+                    | Tồn đọng
+              .tab-content
+                #overview_1.tab-pane.active
+                  .table-responsive
+                    table.table.table-striped.table-hover.table-bordered
+                      thead
+                        tr
+                          th
+                            | Khách hàng
+                          th
+                            | S/L mua
+                          th
+                            | Tổng tiền
+                          th
+                            | Trạng thái
+                          th
+                      tbody
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Amanda Nilson
+                          td
+                            | 4
+                          td
+                            | $12625.50
+                          td
+                            span.label.label-sm.label-success
+                              | Đã thanh toán
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | David Wilson
+                          td
+                            | 3
+                          td
+                            | $625.50
+                          td
+                            span.label.label-sm.label-warning
+                              | Đang xác nhận
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jhon Doe
+                          td
+                            | 2
+                          td
+                            | $125.00
+                          td
+                            span.label.label-sm.label-danger
+                              | Đã hủy
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Patrick Walker
+                          td
+                            | 2
+                          td
+                            | $1239.85
+                          td
+                            span.label.label-sm.label-success
+                              | Đã thanh toán
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Paul Strong
+                          td
+                            | 1
+                          td
+                            | $890.85
+                          td
+                            span.label.label-sm.label-info
+                              | Đang chuyển
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Bill Chang
+                          td
+                            | 45
+                          td
+                            | $12,125.70
+                          td
+                            span.label.label-sm.label-primary
+                              | Đã chuyển
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jane Hilson
+                          td
+                            | 5
+                          td
+                            | $239.85
+                          td
+                            span.label.label-sm.label-warning
+                              | Đang xác nhận
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                #overview_2.tab-pane
+                  .table-responsive
+                    table.table.table-striped.table-hover.table-bordered
+                      thead
+                        tr
+                          th
+                            | Khách hàng
+                          th
+                            | S/L mua
+                          th
+                            | Tổng tiền
+                          th
+                            | Trạng thái
+                          th
+                      tbody
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jane Hilson
+                          td
+                            | 5
+                          td
+                            | $239.85
+                          td
+                            span.label.label-sm.label-warning
+                              | Đang xác nhận
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | David Wilson
+                          td
+                            | 3
+                          td
+                            | $625.50
+                          td
+                            span.label.label-sm.label-warning
+                              | Đang xác nhận
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Amanda Nilson
+                          td
+                            | 4
+                          td
+                            | $12625.50
+                          td
+                            span.label.label-sm.label-success
+                              | Đã thanh toán
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Paul Strong
+                          td
+                            | 1
+                          td
+                            | $890.85
+                          td
+                            span.label.label-sm.label-info
+                              | Đang chuyển
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jhon Doe
+                          td
+                            | 2
+                          td
+                            | $125.00
+                          td
+                            span.label.label-sm.label-danger
+                              | Đã hủy
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Patrick Walker
+                          td
+                            | 2
+                          td
+                            | $1239.85
+                          td
+                            span.label.label-sm.label-success
+                              | Đã thanh toán
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Bill Chang
+                          td
+                            | 45
+                          td
+                            | $12,125.70
+                          td
+                            span.label.label-sm.label-primary
+                              | Đã chuyển
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                #overview_3.tab-pane
+                  .table-responsive
+                    table.table.table-striped.table-hover.table-bordered
+                      thead
+                        tr
+                          th
+                            | Khách hàng
+                          th
+                            | Số lượng mua
+                          th
+                            | Tổng tiền
+                          th
+                      tbody
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | David Wilson
+                          td
+                            | 3
+                          td
+                            | $625.50
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Amanda Nilson
+                          td
+                            | 4
+                          td
+                            | $12625.50
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jhon Doe
+                          td
+                            | 2
+                          td
+                            | $125.00
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Bill Chang
+                          td
+                            | 45
+                          td
+                            | $12,125.70
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Paul Strong
+                          td
+                            | 1
+                          td
+                            | $890.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jane Hilson
+                          td
+                            | 5
+                          td
+                            | $239.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Patrick Walker
+                          td
+                            | 2
+                          td
+                            | $1239.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                #overview_4.tab-pane
+                  .table-responsive
+                    table.table.table-striped.table-hover.table-bordered
+                      thead
+                        tr
+                          th
+                            | Khách hàng
+                          th
+                            | Số lượng mua
+                          th
+                            | Tổng tiền
+                          th
+                      tbody
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Patrick Walker
+                          td
+                            | 2
+                          td
+                            | $1239.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Amanda Nilson
+                          td
+                            | 4
+                          td
+                            | $12625.50
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | David Wilson
+                          td
+                            | 3
+                          td
+                            | $625.50
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Bill Chang
+                          td
+                            | 45
+                          td
+                            | $12,125.70
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jane Hilson
+                          td
+                            | 5
+                          td
+                            | $239.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Jhon Doe
+                          td
+                            | 2
+                          td
+                            | $125.00
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+                        tr
+                          td
+                            a(href='javascript:;')
+                              | Paul Strong
+                          td
+                            | 1
+                          td
+                            | $890.85
+                          td
+                            a.btn.default.btn-xs.green-stripe(href='javascript:;')
+                              | View
+        .row
+          .col-lg-6
+            .portlet.light.bordered
+              .portlet-title
+                .caption
+                  i.fa.fa-home.font-green-haze
+                  span.caption-subject.bold.uppercase.font-green-haze Kho
+              .portlet-body
+                #stock_chart.chart(style='height: 260px;')
+          .col-lg-6
+            .portlet.light.bordered
+              .portlet-title
+                .caption
+                  i.fa.fa-truck.font-green-haze
+                  span.caption-subject.bold.uppercase.font-green-haze Vận chuyển
+              .portlet-body
+                #ship_chart.chart(style='height: 260px;')
+        .row
+          .col-lg-6
+            .portlet.light.bordered.tasks-widget
+              .portlet-title
+                .caption
+                  i.fa.fa-cube.font-green-haze
+                  span.caption-subject.bold.uppercase.font-green-haze Sản phẩm
+              .portlet-body
+                ul.task-list
+                  li
+                    span.task-title Tổng sản phẩm: 120,300
+                  li
+                    span.task-title
+                      | Bán chạy nhất tháng:&nbsp;
+                      a(href='javascript:;') Sản phẩm 1
+                  li
+                    span.task-title
+                      | Bán chạy nhì tháng:&nbsp;
+                      a(href='javascript:;') Sản phẩm 2
+                  li
+                    span.task-title
+                      | Tiềm năng nhất tháng:&nbsp;
+                      a(href='javascript:;') Sản phẩm 3
+          .col-lg-6
+            .portlet.light.bordered.tasks-widget
+              .portlet-title
+                .caption
+                  i.fa.fa-home.font-green-haze
+                  span.caption-subject.bold.uppercase.font-green-haze Địa lý
+              .portlet-body
+                ul.task-list
+                  li
+                    span.task-title Tỉnh thành mua nhiều nhất tháng: Hà Nội
+                  li
+                    span.task-title Tỉnh thành mua nhiều nhì tháng: Hà Nam
+                  li
+                    span.task-title Tỉnh thành bán hàng tiềm năng nhất tháng: Ninh Bình
+      // /.page-content
+    // /.page-content-wrapper
 
-  include ../../includes/footer.jade
-append js
-  script(src='/public/templates/assets/js/dashboard.js', type='text/javascript')
+    include ../../includes/footer.jade
+  append js
+    script(src='/public/templates/assets/js/dashboard.js', type='text/javascript')

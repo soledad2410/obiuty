@@ -9,8 +9,8 @@ $theme-style: 'square';
 $theme-type:  'default';
 
 @import 'global/components.scss';
-@import 'admin/layout/layout.scss';
-@import 'admin/layout/themes/darkblue.scss';
+@import 'admin/layout4/layout.scss';
+@import 'admin/layout4/themes/light.scss';
 @import 'admin/pages/tasks.scss';
 
 .amcharts-main-div a {
