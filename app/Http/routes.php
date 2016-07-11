@@ -10,7 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::auth();
+Route::get('/login', 'Auth\AuthController@getLogin');
+Route::post('/login', 'Auth\AuthController@postLogin');
+Route::get('/logout', 'Auth\AuthController@getLogout');
+Route::get('/register', 'Auth\AuthController@getRegister');
 Route::get('/', 'DashboardController@index');
 
 
