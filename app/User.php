@@ -23,4 +23,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function group()
+    {
+       return $this->hasOne('Group', 'id', 'group_id');
+    }
 }
