@@ -1,0 +1,79 @@
+extends ../../layouts/master.jade
+
+append titlePage
+  title Danh sách thành viên - ORM
+
+append css
+  link(href='/public/templates/assets/css/user.css', rel='stylesheet', type='text/css')
+
+append body
+  +body(class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo")
+
+append body-content
+  include ../../includes/header.jade
+  .page-container
+    include ../../includes/sidebar.jade
+
+    .page-content-wrapper
+      .page-content
+        .page-head
+          .page-title
+            h1
+              | Quản lý thành viên
+          // /.page-title
+        .portlet.light
+          .portlet-title
+            .caption
+              i.fa.fa-users.font-green-haze
+              span.caption-subject.bold.uppercase.font-green-haze Danh sách thành viên
+          .portlet-body
+            .table-responsive
+              table.table.table-striped.table-hover
+                thead
+                  tr
+                    th
+                      | Tên đăng nhập
+                    th
+                      | Họ tên
+                    th
+                      | Ngày sinh
+                    th
+                      | Số điện thoại
+                    th
+                      | Email
+                    th
+                      | Trạng thái
+                    th
+                      | Hành động
+                    th
+                tbody
+                  - var arr=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'];
+                  - each item in arr
+                    tr
+                      td
+                        a(href='javascript:;')
+                          = 'nguyenvan' + item
+                      td
+                        = 'Nguyễn Văn ' + item
+                      td
+                        | 12/12/2012
+                      td
+                        | 0987654321
+                      td
+                        = 'nguyenvan' + item + '@gmail.com'
+                      td
+                        span.label.label-sm.label-success
+                          | Hoạt động
+                      td
+                        button.btn.btn-info.btn-xs
+                          i.fa.fa-eye
+                        button.btn.btn-primary.btn-xs
+                          i.fa.fa-pencil
+                        button.btn.btn-danger.btn-xs
+                          i.fa.fa-trash
+      // /.page-content
+    // /.page-content-wrapper
+
+    include ../../includes/footer.jade
+  append js
+    script(src='/public/templates/assets/js/user.js', type='text/javascript')

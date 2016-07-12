@@ -16,6 +16,7 @@ elixir(function(mix) {
     mix.remove('public/templates/');
     mix.sass('login.scss', 'public/templates/assets/css/login.css');
     mix.sass('dashboard.scss', 'public/templates/assets/css/dashboard.css');
+    mix.sass('user.scss', 'public/templates/assets/css/user.css');
     mix
         .copy('node_modules/font-awesome/fonts', 'public/templates/assets/fonts')
         .copy('node_modules/simple-line-icons/fonts', 'public/templates/assets/fonts')
