@@ -541,6 +541,8 @@ var Layout = function () {
             $(el).find('>ul>li').each(function (i, e) {
                 if ($(e).find('>a').attr('href') === window.location.href) {
                     $(e).addClass('active');
+                    $(e).parents('li').addClass('active open');
+                    $(e).parents('li').find('>a>.arrow').addClass('open');
                 }
             });
         });
