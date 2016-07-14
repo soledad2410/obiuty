@@ -61,7 +61,5 @@ var Dasboard = function () {
 }();
 
 $(document).ready(function () {
-    Common.init();
-    Layout.init();
     Dasboard.init();
 });
