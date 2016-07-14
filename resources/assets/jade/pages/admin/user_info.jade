@@ -1,0 +1,92 @@
+extends ../../layouts/master.jade
+
+append titlePage
+  title Thêm mới thành viên - ORM
+
+append css
+  link(href='/public/templates/assets/css/user.css', rel='stylesheet', type='text/css')
+
+append body
+  +body(class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo")
+
+append body-content
+  include ../../includes/header.jade
+  .page-container
+    include ../../includes/sidebar.jade
+
+    .page-content-wrapper
+      .page-content
+        .page-head
+          .page-title
+            h1
+              | Thông tin thành viên
+          span.pull-right
+            a.btn.btn-primary(href='user.html')
+              | &laquo; Quay lại
+          // /.page-title
+        .portlet.light
+          .portlet-title
+            .caption
+              i.fa.fa-user.font-green-haze
+              span.caption-subject.bold.uppercase.font-green-haze Thông tin chính
+          .portlet-body.form
+            form.form-horizontal(role='form', method='post', class='row')
+              .col-lg-4.col-md-5
+                img(src='/public/templates/assets/images/avatar.jpg', alt='', width='300px')
+              .col-lg-8.col-md-7
+                .form-body
+                  .form-group
+                    label.col-md-3.control-label Tên đăng nhập
+                    .col-md-9.control-text
+                      | nguyenvana
+                  .form-group
+                    label.col-md-3.control-label Email
+                    .col-md-9.control-text
+                      | nguyenvana@gmail.com
+                  .form-group
+                    label.col-md-3.control-label Vị trí
+                    .col-md-9.control-text
+                      | Nhân viên bán hàng
+                  .form-group
+                    label.col-md-3.control-label Nhóm quyền
+                    .col-md-9.control-text
+                      | Nhóm nhân viên
+                  .form-group
+                    label.col-md-3.control-label Họ tên
+                    .col-md-9.control-text
+                      | Nguyễn Văn A
+                  .form-group
+                    label.col-md-3.control-label Số điện thoại
+                    .col-md-9.control-text
+                      | 0987654321
+                  .form-group
+                    label.col-md-3.control-label Số CMT/Hộ chiếu
+                    .col-md-9.control-text
+                      | 132678234
+                  .form-group
+                    label.control-label.col-md-3 Ngày sinh
+                    .col-md-4.control-text
+                      | 12/12/2012
+                  .form-group
+                    label.control-label.col-md-3 Nơi tạm trú
+                    .col-md-4.control-text
+                      | Hà Nội
+                  .form-group
+                    label.control-label.col-md-3 Trạng thái
+                    .col-md-4.control-text
+                      span.label.label-danger
+                        | Tạm khóa
+                  .form-group
+                    label.control-label.col-md-3 Ngày bắt đầu làm việc
+                    .col-md-4.control-text
+                      | 12/12/2012
+                  .form-group
+                    label.control-label.col-md-3 Ngày nghỉ làm việc
+                    .col-md-4.control-text
+                      | ~
+      // /.page-content
+    // /.page-content-wrapper
+
+    include ../../includes/footer.jade
+  append js
+    script(src='/public/templates/assets/js/user.js', type='text/javascript')
