@@ -29,6 +29,9 @@ elixir(function(mix) {
         .copy('node_modules/amcharts/dist/amcharts/radar.js', 'resources/assets/js/vendor')
         .copy('node_modules/amcharts/dist/amcharts/themes/light.js', 'resources/assets/js/vendor')
         .copy('node_modules/jquery-slimscroll/jquery.slimscroll.js', 'resources/assets/js/vendor')
+        .copy('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css', 'public/templates/assets/css')
+        .copy('node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js', 'resources/assets/js/vendor')
+        .copy('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js', 'resources/assets/js/vendor')
     ;
     mix.scripts([
         'vendor/jquery.js',
@@ -48,6 +51,8 @@ elixir(function(mix) {
         'vendor/jquery.js',
         'vendor/bootstrap.js',
         'vendor/jquery.slimscroll.js',
+        'vendor/bootstrap-datepicker.js',
+        'vendor/bootstrap-datepicker.vi.min.js',
         'common.js',
         'layout.js',
         'user.js'
