@@ -37,6 +37,12 @@ var Common = function() {
             isRTL = true;
         }
 
+        if ($('.date-picker').length > 0) {
+            $('.date-picker').datepicker({
+                autoclose: true
+            });
+        }
+
         isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
         isIE9 = !!navigator.userAgent.match(/MSIE 9.0/);
         isIE10 = !!navigator.userAgent.match(/MSIE 10.0/);

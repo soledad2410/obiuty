@@ -533,6 +533,20 @@ var Layout = function () {
             }
         }
     };
+    var handleMenuActive = function () {
+        $('.page-sidebar-menu').find('>li').each(function (index, el) {
+            if ($(el).find('>a').attr('href') === window.location.href) {
+                $(el).addClass('active');
+            }
+            $(el).find('>ul>li').each(function (i, e) {
+                if ($(e).find('>a').attr('href') === window.location.href) {
+                    $(e).addClass('active');
+                    $(e).parents('li').addClass('active open');
+                    $(e).parents('li').find('>a>.arrow').addClass('open');
+                }
+            });
+        });
+    };
     //* END:CORE HANDLERS *//
 
     return {
@@ -572,11 +586,16 @@ var Layout = function () {
             handleGoTop(); //handles scroll to top functionality in the footer
         },
 
+        initMenuActive: function () {
+            handleMenuActive();
+        },
+
         init: function () {
             this.initHeader();
             this.initSidebar();
             this.initContent();
             this.initFooter();
+            this.initMenuActive();
         },
 
         //public function to fix the sidebar and content height accordingly
@@ -602,3 +621,8 @@ var Layout = function () {
     };
 
 }();
+
+$(document).ready(function () {
+    Common.init();
+    Layout.init();
+});
