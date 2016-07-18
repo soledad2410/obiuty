@@ -1,0 +1,117 @@
+extends ../../layouts/master.jade
+
+append titlePage
+  title Nhập kho - ORM
+
+append css
+  link(href='/public/templates/assets/css/goods_receipt.css', rel='stylesheet', type='text/css')
+
+append body
+  +body(class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo")
+
+append body-content
+  include ../../includes/header.jade
+  .page-container
+    include ../../includes/sidebar.jade
+
+    .page-content-wrapper
+      .page-content
+        .page-head
+          .page-title
+            h1
+              | Quản lý thành viên
+          // /.page-title
+        .row
+          .col-md-4
+            .portlet.light
+              .portlet-title
+                .caption
+                  span.caption-subject.bold.font-purple-plum.uppercase
+                    | Sản phẩm
+                .inputs
+                  .portlet-input.input-inline
+                    .input-icon.right
+                      i.icon-magnifier
+                      input.form-control.input-circle(type='text', placeholder='Tên hoặc mã sản phẩm')
+              .portlet-body
+                .scroller(style='height:616px')
+                  - var n = 0
+                  ul.media-list
+                    while n < 10
+                      - n++
+                      li.media
+                        a.pull-left(href='javascript:;')
+                          img.media-object(src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+', alt='64x64', data-src='holder.js/64x64', style='width: 64px; height: 64px;')
+                        .media-body
+                          h5.media-heading
+                            = 'Sản phẩm ' + n
+                          p.price-sm
+                            span
+                              | Giá: 120.000đ
+                          p.product-code
+                            span
+                              = 'Mã: SP' + n
+          .col-md-8
+            .portlet.light
+              .portlet-title
+                .caption
+                  span.caption-subject.bold.font-purple-plum.uppercase
+                    | Phiếu nhập hàng
+              .portlet-body
+                .scroller(style='height:400px')
+                  .table-scrollable
+                    table.table.table-condensed.table-hover
+                      thead
+                        tr
+                          th
+                            | #
+                          th
+                            | Mã SP
+                          th
+                            | Tên SP
+                          th
+                            | Giá
+                          th
+                            | Số lượng
+                          th
+                            | Thành tiền
+                      tbody
+                        - var n = 0
+                        while n < 20
+                          - n++
+                          tr
+                            td
+                              = n
+                            td
+                              = 'SP' + n
+                            td
+                              = 'Sản phẩm ' + n
+                            td
+                              span.price 240.000đ
+                            td
+                              | 10
+                            td
+                              span.price 2.400.000đ
+            .portlet.light
+              .portlet-body
+                .row
+                  .col-md-7
+                    textarea(placeholder='Ghi chú' class='form-control' rows='5')
+                  .col-md-5
+                    ul.payment-info
+                      li Tổng sản phẩm:
+                        span 100
+                      li Tổng giá trị:
+                        span 200.000.000đ
+                      li Thuế:
+                        span 10%
+                      li Phải trả:
+                        span 230.000.000đ
+                    button.btn-payment Thanh toán
+                    div(style='clear:both')
+      // /.page-content
+    // /.page-content-wrapper
+
+    include ../../includes/footer.jade
+  append js
+    script(src='/public/templates/assets/js/user.js', type='text/javascript')

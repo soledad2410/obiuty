@@ -1,0 +1,52 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
+
+@import 'global/_variables';
+@import 'global/components/_mixins';
+
+$theme-style: 'square';
+$theme-type:  'default';
+
+@import 'global/components.scss';
+@import 'admin/layout4/layout.scss';
+@import 'admin/layout4/themes/light.scss';
+
+.price,.price-sm {
+  color: #F24747;
+  font-style: italic;
+  margin-bottom: 1px;
+}
+.price-sm {
+  font-size: 12px;
+}
+.product-code {
+  color: #555;
+  font-size: 12px;
+}
+.btn-payment {
+  background-color: #5d9cd1;
+  color: #fff;
+  border: 0;
+  width: 100%;
+  line-height: 40px;
+  max-width: 260px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0px 3px 2px #999;
+  float: right;
+}
+.btn-payment:active {
+  box-shadow: none;
+}
+ul.payment-info li {
+  list-style: none;
+  border-bottom: 1px dashed #eee;
+  padding-top: 5px;
+}
+ul.payment-info li span {
+  font-weight:600;
+  padding-left:3px;
+  float: right;
+}
