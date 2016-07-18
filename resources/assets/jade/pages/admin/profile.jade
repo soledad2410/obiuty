@@ -1,0 +1,107 @@
+extends ../../layouts/master.jade
+
+append titlePage
+  title Thông tin cá nhân - ORM
+
+append css
+  link(href='/public/templates/assets/css/profile.css', rel='stylesheet', type='text/css')
+
+append body
+  +body(class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo")
+
+append body-content
+  include ../../includes/header.jade
+  .page-container
+    include ../../includes/sidebar.jade
+    .page-content-wrapper
+      .page-content
+        .profile-content
+          .row
+            .col-md-12
+              .profile-sidebar(style='width:250px;')
+                .portlet.light.profile-sidebar-portlet
+                  .profile-userpic
+                    img.img-responsive(src='/public/templates/assets/images/profile_user.jpg', alt='')
+                  .profile-usertitle
+                    .profile-usertitle-name
+                      | Nguyễn Văn A
+                    .profile-usertitle-job
+                      | Nhân viên tư vấn
+                  .profile-usermenu
+              .profile-content
+                .row
+                  .col-md-12
+                    .portlet.light
+                      .portlet-title.tabbable-line
+                        .caption.caption-md
+                          i.icon-globe.theme-font.hide
+                          span.caption-subject.font-blue-madison.bold.uppercase Tài khoản
+                        ul.nav.nav-tabs
+                          li.active
+                            a(href='#tab_1_1', data-toggle='tab') Thông tin cá nhân
+                          li
+                            a(href='#tab_1_2', data-toggle='tab') Đổi ảnh đại diện
+                          li
+                            a(href='#tab_1_3', data-toggle='tab') Đổi mật khẩu
+                      .portlet-body
+                        .tab-content
+                          #tab_1_1.tab-pane.active
+                            form(role='form', action='#')
+                              .form-group
+                                label.control-label Họ tên
+                                input.form-control(type='text', placeholder='')
+                              .form-group
+                                label.control-label Số điện thoại
+                                input.form-control(type='text', placeholder='')
+                              .form-group
+                                label.control-label CMTND/Hộ chiếu
+                                input.form-control(type='text', placeholder='')
+                              .form-group
+                                label.control-label Email
+                                input.form-control(type='text', placeholder='')
+                              .margiv-top-10
+                                a.btn.green-haze(href='javascript:;')
+                                  | Lưu
+                                a.btn.default(href='javascript:;')
+                                  | Hủy
+                          #tab_1_2.tab-pane
+                            form(action='#', role='form')
+                              .form-group
+                                .fileinput.fileinput-new(data-provides='fileinput')
+                                  .fileinput-new.thumbnail(style='width: 200px; height: 150px;')
+                                    img(src='http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image', alt='')
+                                  .fileinput-preview.fileinput-exists.thumbnail(style='max-width: 200px; max-height: 150px;')
+                                  div
+                                    span.btn.default.btn-file
+                                      span.fileinput-new
+                                        | Chọn ảnh
+                                      span.fileinput-exists
+                                        | Đổi ảnh
+                                      input(type='file', name='...')
+                                    a.btn.default.fileinput-exists(href='javascript:;', data-dismiss='fileinput')
+                                      | Xóa
+                                .clearfix.margin-top-10
+                              .margin-top-10
+                                a.btn.green-haze(href='javascript:;')
+                                  | Lưu
+                                a.btn.default(href='javascript:;')
+                                  | Hủy
+                          #tab_1_3.tab-pane
+                            form(action='#')
+                              .form-group
+                                label.control-label Mật khẩu hiện tại
+                                input.form-control(type='password')
+                              .form-group
+                                label.control-label Mật khẩu mới
+                                input.form-control(type='password')
+                              .form-group
+                                label.control-label Nhập lại mật khẩu mới
+                                input.form-control(type='password')
+                              .margin-top-10
+                                a.btn.green-haze(href='javascript:;')
+                                  | Lưu
+                                a.btn.default(href='javascript:;')
+                                  | Hủy
+    include ../../includes/footer.jade
+  append js
+    script(src='/public/templates/assets/js/profile.js', type='text/javascript')
