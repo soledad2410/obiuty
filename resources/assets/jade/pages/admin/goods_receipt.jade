@@ -1,7 +1,7 @@
 extends ../../layouts/master.jade
 
 append titlePage
-  title Nhập kho - ORM
+  title Nhập hàng - ORM
 
 append css
   link(href='/public/templates/assets/css/goods_receipt.css', rel='stylesheet', type='text/css')
@@ -19,7 +19,7 @@ append body-content
         .page-head
           .page-title
             h1
-              | Quản lý thành viên
+              | Nhập hàng
           // /.page-title
         .row
           .col-md-4
@@ -34,7 +34,7 @@ append body-content
                       i.icon-magnifier
                       input.form-control.input-circle(type='text', placeholder='Tên hoặc mã sản phẩm')
               .portlet-body
-                .scroller(style='height:616px')
+                .scroller(style='height:300px')
                   - var n = 0
                   ul.media-list
                     while n < 10
@@ -51,6 +51,31 @@ append body-content
                           p.product-code
                             span
                               = 'Mã: SP' + n
+            .portlet.light
+              .portlet-title
+                .caption
+                  span.caption-subject.bold.font-purple-plum.uppercase
+                    | Nhà cung cấp
+                .inputs
+                  .portlet-input.input-inline
+                    .input-icon.right
+                      i.icon-magnifier
+                      input.form-control.input-circle(type='text', placeholder='Nhập tên nhà cung cấp')
+              .portlet-body
+                .scroller(style='height:200px')
+                  - var n = 0
+                  ul.media-list
+                    while n < 10
+                      - n++
+                      li.media
+                        a.pull-left(href='javascript:;')
+                          img.media-object(src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+', alt='64x64', data-src='holder.js/64x64', style='width: 64px; height: 64px;')
+                        .media-body
+                          h5.media-heading
+                            = 'Nhà cung cấp ' + n
+                          p.price-sm
+                            span
+                              = 'ncc ' + n + '@domain' + n + '.com'
           .col-md-8
             .portlet.light
               .portlet-title
@@ -108,7 +133,6 @@ append body-content
                       li Phải trả:
                         span 230.000.000đ
                     button.btn-payment Thanh toán
-                    div(style='clear:both')
       // /.page-content
     // /.page-content-wrapper
 
