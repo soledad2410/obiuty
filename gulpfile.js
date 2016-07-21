@@ -18,6 +18,7 @@ elixir(function(mix) {
     mix.sass('dashboard.scss', 'public/templates/assets/css/dashboard.css');
     mix.sass('user.scss', 'public/templates/assets/css/user.css');
     mix.sass('profile.scss', 'public/templates/assets/css/profile.css');
+    mix.sass('goods_receipt.scss', 'public/templates/assets/css/goods_receipt.css');
     mix
         .copy('node_modules/font-awesome/fonts', 'public/templates/assets/fonts')
         .copy('node_modules/simple-line-icons/fonts', 'public/templates/assets/fonts')
